@@ -5,7 +5,8 @@ import store from './store'
 import './plugins/element.js'
 import '@/style/index.scss'
 Vue.config.productionTip = false
-
+import * as _ from './utils/index.js'
+Vue.prototype.$_ = _
 new Vue({
   router,
   store,

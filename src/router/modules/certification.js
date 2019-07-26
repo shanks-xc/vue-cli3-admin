@@ -4,16 +4,19 @@ import Layout from '@/layout'
 const certificationRouter = {
   path: '/certification',
   component: Layout,
-  name: '认证中心',
+  name: 'certification',
   icon: 'el-icon-date',
+  meta: {
+    title: '认证中心'
+  },
   redirect: '/certification/index',
   children: [
     {
       path: 'index',
       component: () => import('@/views//certification'),
-      name: '个人认证',
+      name: 'accountIndex',
       meta: {
-        title: 'account',
+        title: '个人认证',
         icon: 'guide',
         noCache: true
       }

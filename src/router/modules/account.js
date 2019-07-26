@@ -4,16 +4,19 @@ import Layout from '@/layout/index.vue'
 const accountRouter = {
   path: '/account',
   component: Layout,
-  name: '系统账号管理',
+  name: 'account',
   icon: 'el-icon-message',
   redirect: '/account/index',
+  meta: {
+    title: '系统账号管理'
+  },
   children: [
     {
       path: 'index',
       component: () => import('@/views/account/index.vue'),
-      name: '账号管理',
+      name: 'account',
       meta: {
-        title: 'account',
+        title: '账号管理',
         icon: 'guide',
         noCache: true
       }
@@ -21,9 +24,9 @@ const accountRouter = {
     {
       path: 'permisssion',
       component: () => import('@/views/account/permission.vue'),
-      name: '权限管理',
+      name: 'account',
       meta: {
-        title: 'account',
+        title: '权限管理',
         icon: 'guide',
         noCache: true
       }

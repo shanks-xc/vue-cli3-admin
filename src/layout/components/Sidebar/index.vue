@@ -9,15 +9,17 @@
             v-if="item.children && item.children.length > 0"
           >
             <template slot="title">
-              <i :class="item.icon"></i>{{ item.name }}</template
+              <i :class="item.icon"></i>{{ item.meta.title }}</template
             >
             <el-menu-item-group>
-              <el-menu-item
-                :index="`${item.path}/${itemSub.path}`"
-                v-for="(itemSub, indexSub) in item.children"
-                :key="indexSub"
-                >{{ itemSub.name }}</el-menu-item
-              >
+              <template v-for="(itemSub, indexSub) in item.children">
+                <el-menu-item
+                  v-if="!itemSub.meta.hiddenNav"
+                  :index="`${item.path}/${itemSub.path}`"
+                  :key="indexSub"
+                  >{{ itemSub.meta.title }}</el-menu-item
+                >
+              </template>
             </el-menu-item-group>
           </el-submenu>
         </template>
@@ -36,7 +38,7 @@ export default {
   computed: {},
   watch: {},
   mounted() {
-    console.log(this.$router.options.routes)
+    console.log(this.$route, 111)
   },
   methods: {
     handleSelect(routerPath) {
