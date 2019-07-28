@@ -25,6 +25,6 @@
 │   │   ├── index.js                            // 引用vuex，创建store
 │   │   ├── modules                             // store模块
 │   ├── style                                   // 存放一些样式
-│   └── utils                                   // 放一个工具函数
+│   ├── utils                                   // 放一个工具函数
 │   │   └── request.js                          // axios的拦截处理
 ```
