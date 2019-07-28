@@ -5,12 +5,10 @@ Vue.use(Router)
 /* Router Modules */
 import accountRouter from '@/router/modules/account'
 import certificationRouter from '@/router/modules/certification'
-import crudRouter from '@/router/modules/crud'
 export const constantRoutes = [
   // 404 page must be placed at the end !!!
   accountRouter,
   certificationRouter,
-  crudRouter,
   {
     path: '*',
     redirect: '/404'

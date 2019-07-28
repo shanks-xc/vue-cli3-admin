@@ -4,7 +4,6 @@
   </div>
 </template>
 <script>
-import req from '@/api/common'
 export default {
   components: {},
   data() {
@@ -12,9 +11,7 @@ export default {
   },
   computed: {},
   watch: {},
-  mounted() {
-    req('getLoginInfo')
-  },
+  mounted() {},
   methods: {}
 }
 </script>
