@@ -1,34 +1,28 @@
-# erp
+## 快速启动项目
 
-## Project setup
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+ cnpm i 或者 npm i
+ npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+ 该项目用到的是 vue-cli3+element-ui
 
-### Run your tests
-```
-npm run test
-```
+ 介绍一下目录结构（主要介绍 src 里面的结构）
 
-### Lints and fixes files
 ```
-npm run lint
+├── src
+│   ├── api                                     // 所有的接口在这里管理
+│   ├── assets                                  // style img之类的东西，图片会被打包
+│   ├── layout                                  // 布局，一般做后台的时候登陆页跟其他页面用的布局是不一样的
+│   ├── plugins                                 // 插件
+│   ├── router
+│   │   ├── modules                             // 划分模块路由
+│   │   └── index.js                            // 路由配置
+│    store                                      // vuex的状态管理
+│   │   ├── getters.js                          // 配置getters
+│   │   ├── index.js                            // 引用vuex，创建store
+│   │   ├── modules                             // store模块
+│   ├── style                                   // 存放一些样式
+│   └── utils                                   // 放一个工具函数
+│   │   └── request.js                          // axios的拦截处理
 ```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
