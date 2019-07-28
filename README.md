@@ -20,7 +20,7 @@
 │   ├── router
 │   │   ├── modules                             // 划分模块路由
 │   │   └── index.js                            // 路由配置
-│   ├──store                                      // vuex的状态管理
+│   ├──store                                    // vuex的状态管理
 │   │   ├── getters.js                          // 配置getters
 │   │   ├── index.js                            // 引用vuex，创建store
 │   │   ├── modules                             // store模块
